@@ -1,0 +1,4 @@
+Sysco is basically system and service company which is located in USA - actually doing food delivery
+In Sri Lanka S/W Development
+They are Using CouchDB. Haven't work with MongoDB. Why?? 
+Check about Erlang if you have time

@@ -1,0 +1,119 @@
+02-05-2018
+
+What is Node.js?
+	Is not a framework or a platform or a programming language
+	It's a runtime environment for JavaScript - crossplatform/ opensource
+	Built in C++ using Chrome's V8 engine (Using C/C++, you can build CPU intensive applications, 
+		but using node.js you cannot do this, it will be dead slow, because this is single threaded)	
+	Single Thread Application
+	Highly sclable and super fast
+	It has the ability to run outside the browser
+	Great for prototying and agile development
+	Large ecosystem of open-source libraries
+	
+Where to use?
+	Data intensive, networking and real-time server-side applications	
+	API's
+	Not intended for CPU intensive applications
+
+Benifits
+	Twice as faster as fewer people
+	fewer lines of code
+
+Node components
+	Modules, Debugger,Streaming, Console,Error handling, Add-ons, Buffer, Callback, Domain
+
+REPL - Read, Evaluate, Print, Loop
+
+
+
+LET US MOVE ON TO REPL ENVIRONMENT - type 'node' in cmd
+------------------------------------------------------
+
+0.1+0.2 ----> 0.30000000000000004 what is the reason?
+
+Press TAB 2 times, a list will be displayed
+Then type os. and press double TAB - Gives some of OS related information
+Then type process. and press double TAB - Gives some of process related information, type process.pid - a process id will be displayed
+
+console.log("Hello")
+Hello
+undefined
+
+WHY UNDEFINED? Because there is no return, 
+	but if you return also you will get an error since this return is not within a functions.
+
+.help -> displays main commands and what they do
+
+Enter .editor -> So now you can type multiline commands in this mode and execute at once
+> .editor
+// Entering editor mode (^D to finish, ^C to cancel)
+console.log("Wasura");
+console.log("Dananjith");
+Wasura
+Dananjith
+undefined
+
+Check about .save and .load also
+
+Exit from REPL 
+--------------
+
+Global Objects
+	__filename
+	__dirname
+	setTimeout(callback,time)
+	clearTimeout(t)
+	setInterval(callback,time)		
+	console
+	process
+
+What is CALLBACK?
+	Blocking call and non blocking call? 
+		Solution for the blocking calls is to have callbacks, to have non-blocking calls	
+
+Node.js Utility modules
+	OS module (we checked in REPL environment)
+	Path module - Handle the path names
+	Net module - Network wrapper for http requests
+	DNS module - Resolves OS name issues
+	Domain module
+
+File System
+	File I/O using simplle wrappers arount standard POSIX (Portable Operating System Interface)
+	readFile, readFileSync
+	fs.open(path,flags[,mode],callback)
+	fs.stat(path,callback)
+	fs.writeFile(filename,data[,options],callback)
+
+NPM (Node Package Manager)
+	It installs the dependencies, third party applications
+	You can publish your own packages
+
+package.json
+	Ppackage name
+	Application name
+	Entry points
+	Dependencies
+	Author details	
+
+What is event driven programming?
+	Event handler is a callback function
+	There is an event loop - which is continuous, which is also a observer design pattern
+	Observer Pattern - The observer pattern is a software design pattern in which an object, 
+			called the subject, maintains a list of its dependents, called observers, 
+			and notifies them automatically of any state changes, usually by calling one of 
+			their methods.
+
+V8 Engine 
+	This is slightly different than other engines.
+	It does code optimization while compiling.
+	V8 engine takes the js file, compile it, keep it in the engine and execute it. That is why this is much faster than others.
+	(check Google IO V8 talk)
+	Check on Dynamic Programming languages, then fast property languages.
+
+Everything that canbe handled by the stack are NOT blocking functions, all the blocking functions will be 
+move into WEB API. But this WEB APIs and Stack are for web browsers, not node.js.
+
+	
+
